@@ -1,0 +1,230 @@
+// Colors
+
+// Primary
+
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+
+// Accent
+
+$blue: hsl(248, 32%, 49%);
+
+// Neutral
+
+$darkBlue: hsl(249, 10%, 26%);
+$grayishBlue: hsl(246, 25%, 77%);
+
+// Fonts
+$poppins: "Poppins", sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: $poppins;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 1440px;
+  display: flex;
+  background: url("./images/bg-intro-desktop.png");
+  position: relative;
+  padding: 7.5rem 10.3125rem;
+  justify-content: center;
+
+  &:after {
+    background: $red;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  & .info-container {
+    width: 50%;
+    color: white;
+    padding-right: 4.687rem;
+    align-self: center;
+
+    & h2 {
+      font-size: 2.6rem;
+      line-height: 50px;
+      margin-bottom: 20px;
+      padding-right: 5rem;
+      font-weight: 700;
+    }
+
+    & p {
+      font-size: 0.9rem;
+    }
+  }
+
+  & .form-container {
+    width: 50%;
+
+    & header {
+      background: $blue;
+      color: white;
+      text-align: center;
+      border-radius: 10px;
+      padding: 1.5625rem 0;
+      margin-bottom: 1.5625rem;
+      box-shadow: 0 9px 0px rgba(0, 0, 0, 0.1);
+
+      & span {
+        font-weight: 700;
+      }
+    }
+
+    & main {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    & form {
+      background: white;
+
+      & input {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        font-family: $poppins;
+        padding: 1.5625rem 2rem;
+        border: none;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        margin-bottom: 1.375rem;
+
+        &:focus {
+          border: 1px solid $blue;
+        }
+
+        &.invalid {
+          border: 1px solid red;
+          color: red;
+          background: white url("./images/icon-error.svg") right no-repeat
+            content-box;
+        }
+      }
+
+      & .error-message {
+        color: $red;
+        text-align: right;
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+        font-size: 0.8rem;
+        font-style: italic;
+        display: none;
+
+        &.error-message-active {
+          display: block;
+        }
+      }
+
+      & button {
+        background: $green;
+        width: 100%;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 1.5625rem 2rem;
+        border: 1px solid #31ab75;
+        border-radius: 10px;
+        box-shadow: 0 3px 0 #31ab75;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 1.375rem;
+        transition: background 0.1s ease-out;
+
+        &:hover {
+          background: #71f1ba;
+        }
+      }
+    }
+
+    & footer {
+      text-align: center;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: lightgray;
+      padding: 0 2.8125rem;
+
+      & a {
+        text-decoration: none;
+        color: $red;
+      }
+    }
+  }
+}
+
+// Media Queries
+// Mobile
+
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    display: block;
+    margin: 0;
+  }
+
+  .main-container {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5625rem;
+
+    & .info-container {
+      width: 100%;
+      padding: 0;
+      margin-top: 6.25rem;
+      text-align: center;
+
+      & h2 {
+        padding: 0;
+        font-size: 1.8rem;
+      }
+
+      & p {
+        font-size: 1rem;
+      }
+    }
+
+    & .form-container {
+      width: 100%;
+      margin-top: 4.375rem;
+      margin-bottom: 4.375rem;
+
+      & header {
+        padding-left: 4.5rem;
+        padding-right: 4.5rem;
+      }
+
+      & main {
+        padding: 1.5625rem;
+
+        & input {
+          padding: 1.2rem 1.1rem;
+        }
+
+        & button {
+          padding: 1.2rem 1.5rem;
+        }
+      }
+
+      & footer {
+        padding: 0 1.5rem;
+      }
+    }
+  }
+}

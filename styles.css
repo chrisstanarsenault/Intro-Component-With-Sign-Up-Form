@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 1440px;
+  display: flex;
+  background: url("./images/bg-intro-desktop.png");
+  position: relative;
+  padding: 7.5rem 10.3125rem;
+  justify-content: center;
+}
+.main-container:after {
+  background: #ff7a7a;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.main-container .info-container {
+  width: 50%;
+  color: white;
+  padding-right: 4.687rem;
+  align-self: center;
+}
+.main-container .info-container h2 {
+  font-size: 2.6rem;
+  line-height: 50px;
+  margin-bottom: 20px;
+  padding-right: 5rem;
+  font-weight: 700;
+}
+.main-container .info-container p {
+  font-size: 0.9rem;
+}
+.main-container .form-container {
+  width: 50%;
+}
+.main-container .form-container header {
+  background: #6055a5;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  padding: 1.5625rem 0;
+  margin-bottom: 1.5625rem;
+  box-shadow: 0 9px 0px rgba(0, 0, 0, 0.1);
+}
+.main-container .form-container header span {
+  font-weight: 700;
+}
+.main-container .form-container main {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.main-container .form-container form {
+  background: white;
+}
+.main-container .form-container form input {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  padding: 1.5625rem 2rem;
+  border: none;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin-bottom: 1.375rem;
+}
+.main-container .form-container form input:focus {
+  border: 1px solid #6055a5;
+}
+.main-container .form-container form input.invalid {
+  border: 1px solid red;
+  color: red;
+  background: white url("./images/icon-error.svg") right no-repeat content-box;
+}
+.main-container .form-container form .error-message {
+  color: #ff7a7a;
+  text-align: right;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  display: none;
+}
+.main-container .form-container form .error-message.error-message-active {
+  display: block;
+}
+.main-container .form-container form button {
+  background: #38cc8c;
+  width: 100%;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1.5625rem 2rem;
+  border: 1px solid #31ab75;
+  border-radius: 10px;
+  box-shadow: 0 3px 0 #31ab75;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1.375rem;
+  transition: background 0.1s ease-out;
+}
+.main-container .form-container form button:hover {
+  background: #71f1ba;
+}
+.main-container .form-container footer {
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: lightgray;
+  padding: 0 2.8125rem;
+}
+.main-container .form-container footer a {
+  text-decoration: none;
+  color: #ff7a7a;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    display: block;
+    margin: 0;
+  }
+
+  .main-container {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5625rem;
+  }
+  .main-container .info-container {
+    width: 100%;
+    padding: 0;
+    margin-top: 6.25rem;
+    text-align: center;
+  }
+  .main-container .info-container h2 {
+    padding: 0;
+    font-size: 1.8rem;
+  }
+  .main-container .info-container p {
+    font-size: 1rem;
+  }
+  .main-container .form-container {
+    width: 100%;
+    margin-top: 4.375rem;
+    margin-bottom: 4.375rem;
+  }
+  .main-container .form-container header {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+  .main-container .form-container main {
+    padding: 1.5625rem;
+  }
+  .main-container .form-container main input {
+    padding: 1.2rem 1.1rem;
+  }
+  .main-container .form-container main button {
+    padding: 1.2rem 1.5rem;
+  }
+  .main-container .form-container footer {
+    padding: 0 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
